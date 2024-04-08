@@ -3,7 +3,7 @@
 ```
 * nodejs = v18.16.0
 * npm = v9.5.1
-* yarn = v1.22.19
+* yarn = v1.22.22
 
 * "react": "^18.2.0"
 * "react-dom": "^18.2.0"
