@@ -11,6 +11,8 @@ import Logout from '@mui/icons-material/Logout'
 import PersonAdd from '@mui/icons-material/PersonAdd'
 import Settings from '@mui/icons-material/Settings'
 
+const linkAvatar = 'https://shorturl.at/foCK1'
+
 function Profiles() {
   const [anchorEl, setAnchorEl] = React.useState(null)
   const open = Boolean(anchorEl)
@@ -35,7 +37,7 @@ function Profiles() {
           <Avatar
             sx={{ width: 30, height: 30 }}
             alt="avatar"
-            src="https://shorturl.at/foCK1"
+            src={linkAvatar}
           />
         </IconButton>
       </Tooltip>
@@ -49,10 +51,10 @@ function Profiles() {
         }}
       >
         <MenuItem onClick={handleClose}>
-          <Avatar sx={{ width: 28, height: 28, mr: 2 }}/> Profile
+          <Avatar sx={{ width: 30, height: 30, mr: 2 }} src={linkAvatar} /> Profile
         </MenuItem>
         <MenuItem onClick={handleClose}>
-          <Avatar sx={{ width: 28, height: 28, mr: 2 }}/> My account
+          <Avatar sx={{ width: 30, height: 30, mr: 2 }} src={linkAvatar} /> My account
         </MenuItem>
         <Divider />
         <MenuItem onClick={handleClose}>

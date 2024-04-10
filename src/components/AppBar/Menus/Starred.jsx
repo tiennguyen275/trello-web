@@ -50,7 +50,7 @@ function Starred() {
           </ListItemIcon>
           <ListItemText>Cut</ListItemText>
           <Typography variant="body2" color="text.secondary">
-            ⌘X
+            Ctrl + X
           </Typography>
         </MenuItem>
         <MenuItem>
@@ -59,7 +59,7 @@ function Starred() {
           </ListItemIcon>
           <ListItemText>Copy</ListItemText>
           <Typography variant="body2" color="text.secondary">
-            ⌘C
+            Ctrl + C
           </Typography>
         </MenuItem>
         <MenuItem>
@@ -68,7 +68,7 @@ function Starred() {
           </ListItemIcon>
           <ListItemText>Paste</ListItemText>
           <Typography variant="body2" color="text.secondary">
-            ⌘V
+            Ctrl + V
           </Typography>
         </MenuItem>
         <Divider />

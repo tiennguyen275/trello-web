@@ -59,7 +59,7 @@ function Templates() {
           </ListItemIcon>
           <ListItemText>Copy</ListItemText>
           <Typography variant="body2" color="text.secondary">
-            ⌘C
+            Ctrl + C
           </Typography>
         </MenuItem>
         <MenuItem>
@@ -68,7 +68,7 @@ function Templates() {
           </ListItemIcon>
           <ListItemText>Paste</ListItemText>
           <Typography variant="body2" color="text.secondary">
-            ⌘V
+            Ctrl + V
           </Typography>
         </MenuItem>
         <Divider />
