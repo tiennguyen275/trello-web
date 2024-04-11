@@ -15,6 +15,7 @@ import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone'
 import Tooltip from '@mui/material/Tooltip'
 import HelpOutlineIcon from '@mui/icons-material/HelpOutline'
 import Profiles from './Menus/Profiles'
+import CreateIcon from '@mui/icons-material/Create'
 
 function AppBar() {
   return (
@@ -28,9 +29,9 @@ function AppBar() {
       overflowX: 'auto'
     }}>
       <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5 }}>
-        <AppsIcon sx={{ color: 'primary.main' }}/>
+        <AppsIcon sx={{ color: 'primary.main', cursor: 'pointer' }}/>
         <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.5 }}>
-          <SvgIcon component={TrelloIcon} fontsize="small" inheritViewbox sx={{ color: 'primary.main' }}/>
+          <SvgIcon component={TrelloIcon} fontsize="small" inheritViewbox sx={{ color: 'primary.main', cursor: 'pointer' }}/>
           <Typography variant='span' sx={{ fontSize: '1.2rem', fontWeight: 'bold', color: 'primary.main', cursor: 'pointer' }}
           >Web</Typography>
         </Box>
@@ -40,7 +41,7 @@ function AppBar() {
           <Recent />
           <Starred />
           <Templates />
-          <Button variant="outlined">Create</Button>
+          <Button variant="outlined" startIcon={<CreateIcon />}>Create</Button>
         </Box>
 
       </Box>
