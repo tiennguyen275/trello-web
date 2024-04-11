@@ -50,7 +50,7 @@ function Templates() {
           </ListItemIcon>
           <ListItemText>Cut</ListItemText>
           <Typography variant="body2" color="text.secondary">
-            ⌘X
+            Ctrl + X
           </Typography>
         </MenuItem>
         <MenuItem>
