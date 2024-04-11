@@ -6,12 +6,13 @@ import MenuItem from '@mui/material/MenuItem'
 import Divider from '@mui/material/Divider'
 import ListItemText from '@mui/material/ListItemText'
 import ListItemIcon from '@mui/material/ListItemIcon'
-import Typography from '@mui/material/Typography'
-import ContentCut from '@mui/icons-material/ContentCut'
-import ContentCopy from '@mui/icons-material/ContentCopy'
-import ContentPaste from '@mui/icons-material/ContentPaste'
+import AppSettingsAltRoundedIcon from '@mui/icons-material/AppSettingsAltRounded'
 import Cloud from '@mui/icons-material/Cloud'
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
+import ArrowRightRoundedIcon from '@mui/icons-material/ArrowRightRounded'
+import LaptopWindowsRoundedIcon from '@mui/icons-material/LaptopWindowsRounded'
+import FolderRoundedIcon from '@mui/icons-material/FolderRounded'
+import HandymanRoundedIcon from '@mui/icons-material/HandymanRounded'
 
 function Workspaces() {
   const [anchorEl, setAnchorEl] = React.useState(null)
@@ -46,37 +47,53 @@ function Workspaces() {
       >
         <MenuItem>
           <ListItemIcon>
-            <ContentCut fontSize="small" />
+            <AppSettingsAltRoundedIcon fontSize="small" />
           </ListItemIcon>
-          <ListItemText>Cut</ListItemText>
-          <Typography variant="body2" color="text.secondary">
-            Ctrl + X
-          </Typography>
+          <ListItemText>Applications</ListItemText>
+          <ListItemIcon>
+            <ArrowRightRoundedIcon sx={{ fontSize: '2em' }}/>
+          </ListItemIcon>
         </MenuItem>
         <MenuItem>
           <ListItemIcon>
-            <ContentCopy fontSize="small" />
+            <FolderRoundedIcon fontSize="small" />
           </ListItemIcon>
-          <ListItemText>Copy</ListItemText>
-          <Typography variant="body2" color="text.secondary">
-            Ctrl + C
-          </Typography>
+          <ListItemText>Folders</ListItemText>
+          <ListItemIcon>
+            <ArrowRightRoundedIcon sx={{ fontSize: '2em' }}/>
+          </ListItemIcon>
         </MenuItem>
         <MenuItem>
           <ListItemIcon>
-            <ContentPaste fontSize="small" />
+            <HandymanRoundedIcon fontSize="small" />
           </ListItemIcon>
-          <ListItemText>Paste</ListItemText>
-          <Typography variant="body2" color="text.secondary">
-            Ctrl + V
-          </Typography>
+          <ListItemText>Tools</ListItemText>
+          <ListItemIcon>
+            <ArrowRightRoundedIcon sx={{ fontSize: '2em' }}/>
+          </ListItemIcon>
+        </MenuItem>
+        <Divider />
+        <MenuItem>
+          <ListItemIcon>
+            <LaptopWindowsRoundedIcon fontSize="small" />
+          </ListItemIcon>
+          <ListItemText>Windows</ListItemText>
+          <ListItemIcon>
+            <ArrowRightRoundedIcon sx={{ fontSize: '2em' }}/>
+          </ListItemIcon>
         </MenuItem>
         <Divider />
         <MenuItem>
           <ListItemIcon>
             <Cloud fontSize="small" />
           </ListItemIcon>
-          <ListItemText>Web Clipboard</ListItemText>
+          <ListItemText>Add Item to Menu...</ListItemText>
+        </MenuItem>
+        <MenuItem>
+          <ListItemIcon>
+            <Cloud fontSize="small" />
+          </ListItemIcon>
+          <ListItemText>Customize Menu...</ListItemText>
         </MenuItem>
       </Menu>
     </Box>
