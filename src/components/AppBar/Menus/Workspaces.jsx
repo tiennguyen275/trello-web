@@ -1,4 +1,4 @@
-import React from 'react'
+import { useState } from 'react'
 import Box from '@mui/material/Box'
 import Button from '@mui/material/Button'
 import Menu from '@mui/material/Menu'
@@ -15,14 +15,10 @@ import FolderRoundedIcon from '@mui/icons-material/FolderRounded'
 import HandymanRoundedIcon from '@mui/icons-material/HandymanRounded'
 
 function Workspaces() {
-  const [anchorEl, setAnchorEl] = React.useState(null)
+  const [anchorEl, setAnchorEl] = useState(null)
   const open = Boolean(anchorEl)
-  const handleClick = (event) => {
-    setAnchorEl(event.currentTarget)
-  }
-  const handleClose = () => {
-    setAnchorEl(null)
-  }
+  const handleClick = (event) => setAnchorEl(event.currentTarget)
+  const handleClose = () => setAnchorEl(null)
 
   return (
     <Box>
