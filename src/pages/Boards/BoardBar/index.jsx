@@ -17,7 +17,10 @@ const avatar_styles = {
     width: 32,
     height: 32,
     fontSize: 16,
-    border: 'none'
+    border: 'none',
+    color: 'white',
+    cursor: 'pointer',
+    '&: first-of-type': { bgcolor: '#a4b0be' }
   }
 }
 const menu_styles = {
@@ -87,26 +90,26 @@ function BoardBar() {
         >Invite</Button>
 
         <AvatarGroup max={4} sx={avatar_styles}>
-          <Tooltip title>
-            <Avatar alt="John" src="/static/images/avatar/2.jpg" sx={avatar_styles}/>
+          <Tooltip title ="John">
+            <Avatar alt="John" src="/static/images/avatar/2.jpg" sx={{ ...avatar_styles, bgcolor: '#a4b0be' }}/>
+          </Tooltip>
+          <Tooltip title ="Hemy">
+            <Avatar alt="Hemy Sharp" src="/static/images/avatar/2.jpg" sx={{ ...avatar_styles, bgcolor: '#a4b0be' }}/>
+          </Tooltip>
+          <Tooltip title="Temy">
+            <Avatar alt="Temy Sharp" src="/static/images/avatar/3.jpg" sx={{ ...avatar_styles, bgcolor: '#a4b0be' }}/>
+          </Tooltip>
+          <Tooltip title="Sherry">
+            <Avatar alt="Sherry Sharp" src="/static/images/avatar/1.jpg" sx={{ ...avatar_styles, bgcolor: '#a4b0be' }}/>
           </Tooltip>
           <Tooltip title>
-            <Avatar alt="Hemy Sharp" src="/static/images/avatar/2.jpg" sx={avatar_styles}/>
+            <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" sx={{ ...avatar_styles, bgcolor: '#a4b0be' }}/>
           </Tooltip>
           <Tooltip title>
-            <Avatar alt="Temy Sharp" src="/static/images/avatar/3.jpg" sx={avatar_styles}/>
+            <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" sx={{ ...avatar_styles, bgcolor: '#a4b0be' }}/>
           </Tooltip>
           <Tooltip title>
-            <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" sx={avatar_styles}/>
-          </Tooltip>
-          <Tooltip title>
-            <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" sx={avatar_styles}/>
-          </Tooltip>
-          <Tooltip title>
-            <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" sx={avatar_styles}/>
-          </Tooltip>
-          <Tooltip title>
-            <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" sx={avatar_styles}/>
+            <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" sx={{ ...avatar_styles, bgcolor: '#a4b0be' }}/>
           </Tooltip>
         </AvatarGroup>
       </Box>
