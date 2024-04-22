@@ -48,7 +48,7 @@ function BoardBar() {
       gap: 2,
       paddingX: 2,
       overflowX: 'auto',
-      borderBottom: '1px solid white',
+      borderBottom: '0.25px solid white',
       bgcolor: (theme) => (theme.palette.mode === 'dark' ? '#323b53' : '#9c88ff')
     }}>
       <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5 }}>
