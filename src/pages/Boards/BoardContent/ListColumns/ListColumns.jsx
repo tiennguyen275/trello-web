@@ -3,7 +3,7 @@ import Columns from './Column/Columns'
 import Button from '@mui/material/Button'
 import NoteAddIcon from '@mui/icons-material/NoteAdd'
 
-function ListColumns() {
+function ListColumns({ columns }) {
 
   return (
     <Box sx={{
@@ -13,12 +13,12 @@ function ListColumns() {
       display: 'flex',
       overflowX: 'auto',
       overflowY: 'hidden',
-      '&::-webkit-scrollbar-track': {
-        margin: 2
-      }
+      '&::-webkit-scrollbar-track': { margin: 2 }
     }}>
-      <Columns />
-      <Columns />
+      {/* {columns?.map((column) => {return <Columns key={column._id}/>})} {} use for modify */}
+      {/* {columns?.map(column => (<Columns key={column._id}/>))}
+      only 1 parameter no need to use () for (column) and no need to use return if you use () */}
+      {columns?.map(column => <Columns key={column._id} column={column}/>)} {/* no need to use () if you only return 1 component only */}
 
       {/* Box Add new column CTA */}
       <Box sx={{
