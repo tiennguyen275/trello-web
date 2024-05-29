@@ -57,6 +57,17 @@ export const mockData = {
           { _id: 'card-id-13', boardId: 'board-id-01', columnId: 'column-id-03', title: 'Title of card #13', description: null, cover: null, memberIds: [], comments: [], attachments: [] }
         ]
       }
+      // {
+      //   _id: 'column-id-04',
+      //   boardId: 'board-id-01',
+      //   title: 'Test Column #4',
+      //   cardOrderIds: ['card-id-14', 'card-id-15', 'card-id-16'],
+      //   cards: [
+      //     { _id: 'card-id-14', boardId: 'board-id-01', columnId: 'column-id-04', title: 'Title of card #14', description: null, cover: null, memberIds: [], comments: [], attachments: [] },
+      //     { _id: 'card-id-15', boardId: 'board-id-01', columnId: 'column-id-04', title: 'Title of card #15', description: null, cover: null, memberIds: [], comments: [], attachments: [] },
+      //     { _id: 'card-id-16', boardId: 'board-id-01', columnId: 'column-id-04', title: 'Title of card #16', description: null, cover: null, memberIds: [], comments: [], attachments: [] }
+      //   ]
+      // }
     ]
   }
 }
