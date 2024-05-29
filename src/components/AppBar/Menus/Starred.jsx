@@ -14,7 +14,8 @@ import Cloud from '@mui/icons-material/Cloud'
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
 
 function Starred() {
-  const [anchorEl, setAnchorEl] = React.useState(null)
+  const [
+    anchorEl, setAnchorEl] = React.useState(null)
   const open = Boolean(anchorEl)
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget)
