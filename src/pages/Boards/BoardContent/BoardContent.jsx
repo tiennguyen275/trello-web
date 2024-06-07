@@ -52,19 +52,51 @@ function BoardContent({ board }) {
     setOrderedColumnsState(mapOrder(board?.columns, board?.columnOrderIds, '_id'))
   }, [board])
 
+  // Tìm Column theo CardId
+  const findColumnByCardId = (cardId) => {
+    // Lưu ý: nên dùng c.cards thay vì c.cardOrderIds bởi vì bước handleDragOver sẽ làm
+    // làm dữ liệu cho cards hoàn chỉnh trước rồi mới tạo ra cardOrderIds mới.
+    return orderedColumnsState.find(column => column?.cards?.map(card => card._id)?.include(cardId))
+  }
+
   // Trigger Khi bắt đầu kéo {drag} một phần tử
-  const handleDragStart = (event) => {
+  `const handleDragStart = (event) => {
     // console.log('handleDragStart: ', event)
     setActiveDragItemId(event?.active?.id)
     setActiveDragItemType(event?.active?.data?.current?.columnId
       ? ACTIVE_DRAG_ITEM_TYPE.CARD : ACTIVE_DRAG_ITEM_TYPE.COLUMN)
     setActiveDragItemData(event?.active?.data?.current)
-  }
+  }`
 
+  // Trigger trong qúa trình kéo {drag} một phần tử
+  const handleDragOver = (event) => {
+    // Không làm gì thêm nếu đang kéo column
+    if (activeDragItemType === ACTIVE_DRAG_ITEM_TYPE.COLUMN) return
+
+    // Còn nếu kéo card thì card thì xử lý thêm để có ther kéo card qua lại giữa các columns
+    console.log('handleDragOver', event)
+    const { active, over } = event
+
+    // Cần đảm bảo nếu không tồn tại active hoặc over (khi kéo ra khỏi phạm vi cointainer) thì không
+    // làm gì (tránh crash trang)
+    if (!active || !over) return
+
+    // activeDraggingCard: card đang được kéo
+    const { id: activeDraggingCardId, data: { current: activeDraggingCardData } } = active
+    // overCard: card đang tương tác trên hoặc dưới so với card được kéo ở trên
+    const { id: overCardId } = over
+
+    // Tìm 2 columns theo cardId
+  }
   // Trigger Khi bắt kết thúc hành động kéo {drag} một phần tử => Hành động thả {drop}
   const handleDragEnd = (event) => {
-    // eslint-disable-next-line no-console
     // console.log('handleDragEnd: ', event)
+
+    if (activeDragItemType === ACTIVE_DRAG_ITEM_TYPE.CARD) {
+      // console.log('Action drag Card - And temporarily do nothing!')
+      return
+    }
+
     const { active, over } = event
 
     // Kiểm tra nếu không tồn tại over (kéo linh tinh ra ngoài thì return luôn tránh lỗi)
@@ -110,6 +142,7 @@ function BoardContent({ board }) {
     <DndContext
       sensors={mySensors}
       onDragStart={handleDragStart}
+      onDragOver={handleDragOver}
       onDragEnd={handleDragEnd}>
       <Box sx={{
         bgcolor: (theme) => (theme.palette.mode === 'dark' ? '#323b53' : '#9c88ff'),
